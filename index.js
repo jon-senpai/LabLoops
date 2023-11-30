@@ -18,20 +18,37 @@
 
 // x++
 // }
-let n = 3
-while (n < 51)
-{
-        let Prime = true;
-        let divisor = 2; 
-            while (divisor <= Math.sqrt(n)){
-                if (n % divisor === 0){
-                    Prime = false;
-                    break;
-                }
-                divisor++;
-            }
-                if (Prime){
-                    console.log(n + "Prime");
-                }
-                n++;
-}
+// let n = 3
+// while (n < 51)
+// {
+//         let Prime = true;
+//         let divisor = 2; 
+//             while (divisor <= Math.sqrt(n)){
+//                 if (n % divisor === 0){
+//                     Prime = false;
+//                     break;
+//                 }
+//                 divisor++;
+//             }
+//                 if (Prime){
+//                     console.log(n + "Prime");
+//                 }
+//                 n++;
+// }
+// let id1 = 42;
+// let name1 = "Bruce";
+// let occupation1 = "Knight";
+// let age1 = "41";
+const csv = [
+    { ID: 42, Name: "Bruce", Occupation: "Knight", Age: 41 },
+    { ID: 57, Name: "Bob", Occupation: "Fry Cook", Age: 19 },
+    { ID: 63, Name: "Blaine", Occupation: "Quiz Master", Age: 58 },
+    { ID: 98, Name: "Bill", Occupation: "Doctor’s Assistant", Age: 26 }
+  ];
+  
+  for (const person of csv) {
+    for (const key in person) {
+      console.log(`${key}: ${person[key]}`);
+    }
+    console.log('\n'); // Separate each person's information with a new line
+  }
